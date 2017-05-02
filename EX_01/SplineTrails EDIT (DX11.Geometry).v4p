@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="D:\GitHub\vvvv-experiments\EX_01\subpatches\SplineTrails EDIT (DX11.Geometry).v4p" systemname="SplineTrails EDIT (DX11.Geometry)" filename="D:\GitHub\vvvv-experiments\EX_01\subpatches\SplineTrails EDIT (DX11.Geometry).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="2730" top="5640" width="9555" height="7530">
+   <PATCH nodename="D:\GitHub\vvvv-experiments\EX_01\SplineTrails EDIT (DX11.Geometry).v4p" systemname="SplineTrails EDIT (DX11.Geometry)" filename="D:\GitHub\vvvv-experiments\EX_01\subpatches\SplineTrails EDIT (DX11.Geometry).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="2730" top="6390" width="9555" height="7530">
    </BOUNDS>
    <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
    </PACK>
@@ -287,6 +287,8 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Shape">
    </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="28" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="7530" top="600" width="795" height="240">
@@ -301,35 +303,9 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Gamma">
    </PIN>
-   </NODE>
-   <NODE systemname="SplineRadiusBuffer EDIT (Value Buffer)" filename="SplineRadiusBuffer EDIT (Value Buffer).v4p" nodename="SplineRadiusBuffer EDIT (Value Buffer)" componentmode="Hidden" id="26">
-   <BOUNDS type="Node" left="5025" top="2595" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Segment Count" visible="1">
-   </PIN>
-   <PIN pinname="Radius" visible="1">
-   </PIN>
-   <PIN pinname="Shape" visible="1">
-   </PIN>
-   <PIN pinname="Gamma" visible="1">
-   </PIN>
-   <PIN pinname="Radius Buffer" visible="1">
-   </PIN>
-   <BOUNDS type="Window" left="4710" top="10425" width="9000" height="6000">
-   </BOUNDS>
-   <PIN pinname="Constant Radius" visible="1">
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Segment Count">
-   </LINK>
-   <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Radius">
-   </LINK>
-   <LINK srcnodeid="27" srcpinname="Output Enum" dstnodeid="26" dstpinname="Shape">
-   </LINK>
-   <LINK srcnodeid="28" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Gamma">
-   </LINK>
-   <LINK srcnodeid="26" srcpinname="Radius Buffer" dstnodeid="25" dstpinname="Input Node">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="29">
    <BOUNDS type="Box" left="5490" top="1935" width="480" height="480">
    </BOUNDS>
@@ -347,7 +323,35 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Constant Radius|">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="29" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Constant Radius">
+   <NODE systemname="spr_buffer" filename="spr_buffer.v4p" nodename="spr_buffer.v4p" componentmode="Hidden" id="30">
+   <BOUNDS type="Node" left="4965" top="2685" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Constant Radius" visible="1">
+   </PIN>
+   <PIN pinname="Gamma" visible="1">
+   </PIN>
+   <PIN pinname="Radius" visible="1">
+   </PIN>
+   <PIN pinname="Shape" visible="1">
+   </PIN>
+   <PIN pinname="Radius Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Segment Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="29" srcpinname="Y Output Value" dstnodeid="30" dstpinname="Constant Radius">
+   </LINK>
+   <LINK srcnodeid="28" srcpinname="Y Output Value" dstnodeid="30" dstpinname="Gamma">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="30" dstpinname="Radius">
+   </LINK>
+   <LINK srcnodeid="27" srcpinname="Output Enum" dstnodeid="30" dstpinname="Shape">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Radius Buffer" dstnodeid="25" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="30" dstpinname="Segment Count">
    </LINK>
    </PATCH>
