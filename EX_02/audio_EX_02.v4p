@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
    <PATCH nodename="D:\GitHub\vvvv-experiments\EX_02\audio_EX_02.v4p" systemname="audio_EX_02" filename="D:\GitHub\vvvv-experiments\EX_02\audio_EX_02.v4p" scrollx="0" scrolly="-360">
-   <BOUNDS type="Window" left="7800" top="0" width="16335" height="17505">
+   <BOUNDS type="Window" left="7800" top="0" width="16335" height="15855">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -111,7 +111,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6960" top="285" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="|..\..\..\Music\Wipeout Pure OST\02-cold-storage-onyx.mp3|">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="|..\..\..\Music\Caravan Palace\[2008] Caravan Palace\01. Dragons.mp3|">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="file.avi">
    </PIN>
@@ -533,7 +533,7 @@
    <NODE systemname="VertexNoise (DX11.GeomFX)" filename="%VVVV%\packs\InstanceNoodles\nodes\modules\DX11.GeomFX\VertexNoise (DX11.GeomFX)\VertexNoise (DX11.GeomFX).v4p" nodename="VertexNoise (DX11.GeomFX)" componentmode="Hidden" id="39">
    <BOUNDS type="Node" left="3270" top="7665" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Geometry In" visible="1">
+   <PIN pinname="Geometry In" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
@@ -546,8 +546,6 @@
    <PIN pinname="Technique" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="37" srcpinname="Geometry Out" dstnodeid="39" dstpinname="Geometry In">
-   </LINK>
    <NODE systemname="GouraudDirectional (DX11.Effect)" filename="%VVVV%\packs\dx11\nodes\dx11\GouraudDirectional.fx" nodename="GouraudDirectional (DX11.Effect)" componentmode="Hidden" id="41">
    <BOUNDS type="Node" left="3060" top="11850" width="100" height="100">
    </BOUNDS>
@@ -959,7 +957,7 @@
    </PIN>
    <PIN pinname="Light DirectionXYZ" visible="1">
    </PIN>
-   <PIN pinname="Diffuse Color" slicecount="1" values="|1.00000,0.98332,0.98864,1.00000|" visible="1">
+   <PIN pinname="Diffuse Color" slicecount="1" visible="1" values="|1.00000,0.98332,0.98864,1.00000|">
    </PIN>
    <PIN pinname="Specular Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
@@ -1007,7 +1005,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Decay" slicecount="1" values="0.79" visible="1">
+   <PIN pinname="Decay" slicecount="1" visible="1" values="0.79">
    </PIN>
    </NODE>
    <LINK srcnodeid="58" srcpinname="Position Out" dstnodeid="51" dstpinname="Input 1">
@@ -1125,5 +1123,7 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="104" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Spread Count">
+   </LINK>
+   <LINK srcnodeid="37" srcpinname="Geometry Out" dstnodeid="39" dstpinname="Geometry In">
    </LINK>
    </PATCH>

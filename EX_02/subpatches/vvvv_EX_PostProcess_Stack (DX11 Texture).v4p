@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="D:\GitHub\vvvv-experiments\EX_01\subpatches\vvvv_EX_PostProcess_Stack (DX11 Texture).v4p" systemname="vvvv_EX_PostProcess_Stack (DX11 Texture)" filename="D:\GitHub\vvvv-experiments\EX_01\subpatches\vvvv_EX_PostProcess_Stack (DX11 Texture).v4p">
+   <PATCH nodename="D:\GitHub\vvvv-experiments\EX_02\subpatches\vvvv_EX_PostProcess_Stack (DX11 Texture).v4p" systemname="vvvv_EX_PostProcess_Stack (DX11 Texture)" filename="D:\GitHub\vvvv-experiments\EX_01\subpatches\vvvv_EX_PostProcess_Stack (DX11 Texture).v4p">
    <NODE systemname="Blur (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\Blur.tfx" nodename="Blur (DX11.TextureFX)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="675" top="5805" width="100" height="100">
    </BOUNDS>
@@ -9,7 +9,7 @@
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
-   <PIN pinname="Technique" slicecount="1" values="TwoPass" visible="1">
+   <PIN pinname="Technique" slicecount="1" visible="1" values="TwoPass">
    </PIN>
    <PIN pinname="Width" visible="1">
    </PIN>
@@ -21,9 +21,9 @@
    </PIN>
    <PIN pinname="Texture In" visible="1">
    </PIN>
-   <PIN pinname="Amount" slicecount="1" values="0.61" visible="1">
+   <PIN pinname="Amount" slicecount="1" visible="1" values="0.61">
    </PIN>
-   <PIN pinname="Highlight Boost" slicecount="1" values="0" visible="1">
+   <PIN pinname="Highlight Boost" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Exposure" visible="1">
    </PIN>
@@ -31,7 +31,7 @@
    </PIN>
    </NODE>
    <NODE systemname="FullscreenQuad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\FullscreenQuad (DX11.Layer).v4p" nodename="FullscreenQuad (DX11.Layer)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="240" top="6270" width="100" height="100">
+   <BOUNDS type="Node" left="270" top="8505" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
    </PIN>
@@ -39,9 +39,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="2130" top="6150" width="1455" height="270">
+   <BOUNDS type="Node" left="2160" top="8385" width="1455" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="2130" top="6150" width="3225" height="435">
+   <BOUNDS type="Box" left="2160" top="8385" width="3225" height="435">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Simple PostProcess Stack|">
    </PIN>
@@ -61,13 +61,13 @@
    </PIN>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="GammaXY" slicecount="2" values="-2.47,-2.47" visible="1">
+   <PIN pinname="GammaXY" slicecount="2" visible="1" values="-2.47,-2.47">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Vignette">
    </PIN>
    <PIN pinname="ClampBodyXY" slicecount="2" values="0,0">
    </PIN>
-   <PIN pinname="Color1" slicecount="1" values="|0.49124,0.49124,0.49124,1.00000|" visible="1">
+   <PIN pinname="Color1" slicecount="1" visible="1" values="|0.49124,0.49124,0.49124,1.00000|">
    </PIN>
    <PIN pinname="Color2" visible="1">
    </PIN>
@@ -93,19 +93,17 @@
    </PIN>
    <PIN pinname="Color2" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
-   <PIN pinname="GammaXY" slicecount="2" values="-1.81,-1.81" visible="1">
+   <PIN pinname="GammaXY" slicecount="2" visible="1" values="-1.81,-1.81">
    </PIN>
-   <PIN pinname="ClampBodyXY" slicecount="2" values="0,0" visible="1">
+   <PIN pinname="ClampBodyXY" slicecount="2" visible="1" values="0,0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Texture Out" dstnodeid="2" dstpinname="Texture">
-   </LINK>
    <NODE id="7" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
-   <BOUNDS type="Box" left="240" top="6870" width="750" height="240">
+   <BOUNDS type="Box" left="270" top="9105" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="240" top="6870" width="750" height="240">
+   <BOUNDS type="Node" left="270" top="9105" width="750" height="240">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="2" srcpinname="Layer" dstnodeid="7" dstpinname="Input Node">
@@ -130,7 +128,7 @@
    </LINK>
    <LINK srcnodeid="5" srcpinname="Texture Out" dstnodeid="1" dstpinname="Texture In">
    </LINK>
-   <BOUNDS type="Window" left="11535" top="6945" width="8775" height="8205">
+   <BOUNDS type="Window" left="11880" top="5130" width="8775" height="10170">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -352,6 +350,40 @@
    <LINKPOINT x="6075" y="5423">
    </LINKPOINT>
    <LINKPOINT x="900" y="5423">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Echo (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\modules\Echo\Echo (DX11.Texture 2d).v4p" nodename="Echo (DX11.Texture 2d)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="675" top="7365" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Fade" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Texture Out" dstnodeid="20" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Texture Out" dstnodeid="2" dstpinname="Texture">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="21">
+   <BOUNDS type="Box" left="6075" top="6285" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6075" top="6285" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Echo Fade|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="21" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Fade" linkstyle="Bezier">
+   <LINKPOINT x="6075" y="6930">
+   </LINKPOINT>
+   <LINKPOINT x="900" y="6930">
    </LINKPOINT>
    </LINK>
    </PATCH>
